@@ -46,7 +46,7 @@ int main()
     // Calculate average waiting time and average turnaround time
     for(i = 0; i < n; i++)
     {
-        wtavg += wt[i];
+        wtavg += wt[i]; 
         tatavg += tat[i];
     }
 
