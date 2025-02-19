@@ -10,10 +10,10 @@ int main(){
   }
   if(pid!=0){
      pid1=getpid();
-     printf("\n the parent process ID is %d\n",pid1);
+     printf("\n The parent process ID is %d\n",pid1);
   }
   else{
      pid2=getpid();
-     printf("\n the parent process ID is %d\n",pid2);
+     printf("\n The child process ID is %d\n",pid2);
   }
 }
