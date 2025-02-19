@@ -16,4 +16,5 @@ int main(){
      pid2=getpid();
      printf("\n The child process ID is %d\n",pid2);
   }
+  return 0;
 }
