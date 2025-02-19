@@ -17,18 +17,21 @@ int main(int argc, char *argv[])
     int count = 0;
     int occurrences = 0;
 
-    if (argc != 3) {
+    if (argc != 3) 
+    {
         usage();
         exit(1);
     }
 
     fp = fopen(argv[1], "r");
-    if (!fp) {
+    if (!fp) 
+    {
         printf("grep: could not open file: %s\n", argv[1]);
         exit(1);
     }
 
-    while (fgets(fline, MAX, fp) != NULL) {
+    while (fgets(fline, MAX, fp) != NULL) 
+    {
         count++;
         // Remove newline character if it's at the end of the line
         if ((newline = strchr(fline, '\n')) != NULL) {
@@ -36,13 +39,15 @@ int main(int argc, char *argv[])
         }
 
         // Check if the word is found in the line
-        if (strstr(fline, argv[2]) != NULL) {
+        if (strstr(fline, argv[2]) != NULL) 
+        {
             printf("%s: %d %s\n", argv[1], count, fline);
             occurrences++;
         }
     }
 
-    if (occurrences == 0) {
+    if (occurrences == 0) 
+    {
         printf("No occurrences of the word '%s' found.\n", argv[2]);
     }
 
